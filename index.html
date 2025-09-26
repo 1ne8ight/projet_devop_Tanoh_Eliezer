@@ -1,16 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Présentation Utilisateur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    .presentation {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e9f7ef;
+      border: 1px solid #c8e6c9;
+      border-radius: 10px;
+      display: none;
+      text-align: left;
+    }
+  </style>
 </head>
-
 <body>
-    <p>
-        Eliezer Tanoh
-    </p>
-</body>
+  <div class="container">
+    <h2>Infos Utilisateur</h2>
+    <input type="text" id="nom" placeholder="Entrez votre nom" required>
+    <input type="number" id="age" placeholder="Entrez votre âge" required>
+    <input type="text" id="metier" placeholder="Votre métier" required>
+    <button onclick="afficherPresentation()">Voir Présentation</button>
 
+    <div class="presentation" id="presentationBox"></div>
+  </div>
+
+  <script>
+    function afficherPresentation() {
+      const nom = document.getElementById("nom").value.trim();
+      const age = document.getElementById("age").value.trim();
+      const metier = document.getElementById("metier").value.trim();
+      const box = document.getElementById("presentationBox");
+
+      if(nom && age && metier) {
+        box.style.display = "block";
+        box.innerHTML = `
+          <h3>Présentation</h3>
+          <p>Bonjour, je m'appelle <b>${nom}</b>.</p>
+          <p>J'ai <b>${age} ans</b>.</p>
+          <p>Je travaille en tant que <b>${metier}</b>.</p>
+        `;
+      } else {
+        box.style.display = "block";
+        box.innerHTML = "<p style='color:red;'>⚠️ Merci de remplir toutes les informations.</p>";
+      }
+    }
+  </script>
+</body>
 </html>
