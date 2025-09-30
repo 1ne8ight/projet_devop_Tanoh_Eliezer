@@ -4,8 +4,8 @@ from flask import render_template, request
 
 def addition(a: int, b: int) -> int:
     """Retourne la somme de deux nombres."""
-    return a - b
-    # return a + b
+    # return a - b
+    return a + b
 
 
 @app.route("/")
