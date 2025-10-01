@@ -22,5 +22,5 @@ jobs:
           head: develop        # source de la PR
           title: "Auto PR: develop → master"
           body: "Cette PR a été créée automatiquement après un push sur develop."
-          labels: automated-pr
+          labels: automated-pr, automerge   # <-- ajouté
           draft: false
