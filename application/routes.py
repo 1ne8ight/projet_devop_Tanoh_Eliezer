@@ -2,8 +2,8 @@ from flask import render_template
 
 from application import app
 
-
 # TEST
+
 
 def addition(a: int, b: int) -> int:
     """Retourne la somme de deux nombres."""
