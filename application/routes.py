@@ -8,6 +8,7 @@ def addition(a: int, b: int) -> int:
     # return a - b
     return a + b
 
+
 def soustraction(a: int, b: int) -> int:
     """Retourne la difference entre deux nombres."""
     return a - b
