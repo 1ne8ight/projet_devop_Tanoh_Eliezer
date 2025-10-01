@@ -20,4 +20,4 @@ def index():
     result_sous = soustraction(2, 5)
     # app.logger.info(f"Résultat du calcul : {result}")
 
-    return render_template("index.html", result=result)
+    return render_template("index.html", result=result, result_sous=result_sous)
