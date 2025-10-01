@@ -1,4 +1,5 @@
 import pytest
+
 from application.routes import addition, app
 
 
