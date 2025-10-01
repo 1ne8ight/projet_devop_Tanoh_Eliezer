@@ -2,7 +2,7 @@ from flask import render_template
 
 from application import app
 
-# TEST
+# TEST TEST 2
 
 
 def addition(a: int, b: int) -> int:
