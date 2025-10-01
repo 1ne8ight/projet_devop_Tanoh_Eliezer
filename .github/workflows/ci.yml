@@ -48,4 +48,4 @@ jobs:
     needs: test
     steps:
       - name: Build step (fake)
-        run: echo "Build succeeded ✅"
+        run: echo "Build succeeded"
