@@ -2,9 +2,8 @@ name: Auto Merge PR
 
 on:
   pull_request:
-    types:
-      - synchronize
-      - opened
+    branches:
+      - master
 
 jobs:
   automerge:
