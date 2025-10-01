@@ -15,7 +15,8 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
-          base: master
-          title: "Auto PR from develop to master"
-          body: "This PR was created automatically after push on develop."
+          branch: develop   # <-- source
+          base: master      # <-- destination
+          title: "Auto PR: develop → master"
+          body: "Cette PR a été créée automatiquement après un push sur develop."
+          labels: automated-pr
